@@ -1,0 +1,70 @@
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+/* Welcome Label */
+#welcomeLabel {
+    -fx-text-fill: grey;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 15;
+}
+
+/* Sidebar Buttons */
+.sidebar-button {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-pref-width: 200;
+    -fx-alignment: center-left;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #1abc9c;
+}
+
+/* Logout Button */
+.logout-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+/* Hover Effect for Sidebar Buttons */
+.sidebar-button:hover {
+    -fx-background-color: #1abc9c;
+}
+
+/* Content Area */
+.content-area {
+    -fx-background-color: pink;
+    -fx-padding: 20;
+    -fx-transition: all 0.5s ease;
+}
+
+/* General Font Styling */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #f0f4f8;
+}
+
+/* Button Text Styling */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Add smooth transitions */
+.sidebar-button, .logout-button {
+    -fx-transition: background-color 0.3s ease-in-out, padding 0.3s ease;
+}

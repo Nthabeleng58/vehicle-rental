@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo.UserManagementController"
+      spacing="15" style="-fx-padding: 20;">
+
+    <Label text="Logged-in Users" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- TableView to display logged-in users -->
+    <TableView fx:id="userTableView" prefHeight="200" prefWidth="300">
+        <!-- Username Column -->
+        <columns>
+            <TableColumn fx:id="usernameColumn" text="Username" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="username"/>
+                </cellValueFactory>
+            </TableColumn>
+            <!-- Role Column -->
+            <TableColumn fx:id="roleColumn" text="Role" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="role"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+
+</VBox>

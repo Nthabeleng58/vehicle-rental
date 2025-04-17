@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.PaymentsController" spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Customer Name"/>
+    <TextField fx:id="customerNameField" promptText="Enter customer name"/>
+
+    <Label text="Vehicle Model"/>
+    <TextField fx:id="vehicleModelField" promptText="Enter vehicle model"/>
+
+    <Label text="Rental Days"/>
+    <TextField fx:id="daysField" promptText="Enter number of rental days"/>
+
+    <Label text="Total Amount"/>
+    <TextField fx:id="totalField" promptText="Total" editable="false"/>
+
+    <Label text="Additional Charges"/>
+    <TextField fx:id="additionalChargesField" promptText="Enter additional charges"/>
+
+    <Label text="Payment Method"/>
+    <ComboBox fx:id="paymentMethodCombo"/>
+
+    <HBox spacing="10">
+        <Button fx:id="generateBillButton" text="Generate Bill" onAction="#generateBill"/>
+        <Button fx:id="payNowButton" text="Pay Now" onAction="#payNow"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button fx:id="exportButton" text="Export" onAction="#exportPayment"/>
+    </HBox>
+</VBox>

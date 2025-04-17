@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.VehicleController" spacing="15" alignment="TOP_CENTER" style="-fx-padding: 20;">
+    <Label text="Vehicle Management" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Vehicle Table -->
+    <TableView fx:id="vehicleTable" prefHeight="250" prefWidth="670">
+        <columns>
+            <TableColumn fx:id="idCol" text="Vehicle ID" prefWidth="100" />
+            <TableColumn fx:id="brandCol" text="Brand" prefWidth="100" />
+            <TableColumn fx:id="modelCol" text="Model" prefWidth="100" />
+            <TableColumn fx:id="categoryCol" text="Category" prefWidth="100" />
+            <TableColumn fx:id="rentalPriceCol" text="Rental Price ($/day)" prefWidth="150" />
+            <TableColumn fx:id="availabilityStatusCol" text="Availability" prefWidth="120" />
+        </columns>
+    </TableView>
+
+    <!-- Input Form -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="idField" promptText="Vehicle ID" />
+        <TextField fx:id="brandField" promptText="Brand" />
+        <TextField fx:id="modelField" promptText="Model" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="categoryField" promptText="Category" />
+        <TextField fx:id="priceField" promptText="Rental Price" />
+    </HBox>
+
+    <!-- Availability ComboBox -->
+    <HBox spacing="10" alignment="CENTER">
+        <ComboBox fx:id="availabilityBox" promptText="Availability" />
+    </HBox>
+
+    <!-- Action Buttons -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Add" onAction="#handleAdd" />
+        <Button text="Update" onAction="#handleUpdate" />
+        <Button text="Delete" onAction="#handleDelete" />
+        <Button text="Search" onAction="#handleSearch" />
+    </HBox>
+</VBox>

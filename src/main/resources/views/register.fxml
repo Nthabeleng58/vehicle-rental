@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.demo.RegisterController"
+           fx:id="rootPane"
+           style="-fx-background-color: linear-gradient(to bottom right, #e0eafc, #cfdef3);">
+
+    <!-- Register Form with Glassmorphism Effect -->
+    <VBox fx:id="formVBox" spacing="20" alignment="CENTER"
+          style="
+            -fx-padding: 50;
+            -fx-background-color: rgba(255, 255, 255, 0.3);
+            -fx-background-radius: 20;
+            -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 20, 0.1, 0, 4);
+            -fx-border-radius: 20;
+            -fx-border-color: rgba(255, 255, 255, 0.3);
+            -fx-border-width: 1;
+            -fx-max-width: 400;
+            -fx-alignment: center;">
+
+        <!-- Title Label with Custom Style -->
+        <Label text="Create an Account"
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #222;" />
+
+        <!-- Username Field with Icon -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="👤" style="-fx-font-size: 18;" />
+            <TextField fx:id="usernameField" promptText="Username"
+                       style="-fx-pref-width: 280px; -fx-font-size: 15px; -fx-padding: 10; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #d0d0d0; -fx-background-color: white;" />
+        </HBox>
+
+        <!-- Password Field with Icon -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="🔒" style="-fx-font-size: 18;" />
+            <PasswordField fx:id="passwordField" promptText="Password"
+                           style="-fx-pref-width: 280px; -fx-font-size: 15px; -fx-padding: 10; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #d0d0d0; -fx-background-color: white;" />
+        </HBox>
+
+        <!-- Role ChoiceBox -->
+        <ChoiceBox fx:id="roleChoiceBox"
+                   style="-fx-pref-width: 280px; -fx-font-size: 14px; -fx-padding: 8; -fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #d0d0d0; -fx-background-color: white;" />
+
+        <!-- Error Message -->
+        <Label fx:id="registerMessage" textFill="crimson" style="-fx-font-size: 13px;" />
+
+        <!-- Register Button with Hover Animation -->
+        <Button text="Register" onAction="#registerUser"
+                style="-fx-background-color: #6200ea; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 10 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 20, 0.1, 0, 4);" />
+
+        <!-- Back to Login Button with Hover Animation -->
+        <Button text="Back to Login" onAction="#backToLogin"
+                style="-fx-background-color: transparent; -fx-text-fill: #6200ea; -fx-font-size: 14px; -fx-underline: true;" />
+    </VBox>
+
+</StackPane>

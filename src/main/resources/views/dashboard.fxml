@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.DashboardController"
+            stylesheets="/dashboard.css"
+            prefWidth="1000" prefHeight="600">
+
+    <!-- Top Bar -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="top-bar" BorderPane.alignment="TOP_CENTER">
+            <Label text="Vehicle Rental Dashboard" styleClass="top-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Label fx:id="welcomeLabel" styleClass="top-title"/>
+            <Button text="Logout" onAction="#handleLogout" styleClass="logout-button"/>
+        </HBox>
+    </top>
+
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="10" styleClass="sidebar" BorderPane.alignment="CENTER_LEFT" prefWidth="200" style="-fx-padding: 20;">
+            <Label text="Navigation" styleClass="sidebar-title"/>
+            <Button fx:id="vehiclesButton" text="Vehicles" onAction="#openVehicles" styleClass="sidebar-button"/>
+            <Button fx:id="customersButton" text="Customers" onAction="#openCustomers" styleClass="sidebar-button"/>
+            <Button fx:id="bookingsButton" text="Bookings" onAction="#openBookings" styleClass="sidebar-button"/>
+            <Button fx:id="paymentsButton" text="Payments" onAction="#openPayments" styleClass="sidebar-button"/>
+            <Button fx:id="reportsButton" text="Reports" onAction="#openReports" styleClass="sidebar-button"/>
+            <Button fx:id="viewUsersButton" text="View Logged-in Users" onAction="#openUserManagement" styleClass="sidebar-button"/>
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <AnchorPane fx:id="contentArea" styleClass="content-area"/>
+    </center>
+
+</BorderPane>

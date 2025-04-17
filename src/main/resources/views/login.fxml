@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.LoginController"
+            prefWidth="400" prefHeight="450"
+            style="-fx-background-color: linear-gradient(to bottom, #e0f7fa, #b2ebf2);" fx:id="rootPane">
+    <VBox spacing="15" alignment="CENTER"
+          layoutX="50" layoutY="60"
+          prefWidth="300" AnchorPane.topAnchor="40" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+        <!-- Login Title -->
+        <Label text="Welcome Back!" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #00796B;" />
+        <!-- Username Field -->
+        <TextField fx:id="usernameField" promptText="Username" prefWidth="250"
+                   style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10;" />
+        <!-- Password Field -->
+        <PasswordField fx:id="passwordField" promptText="Password" prefWidth="250"
+                       style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10;" />
+        <!-- Login Button -->
+        <Button fx:id="loginButton" text="Login" onAction="#login" prefWidth="150"
+                style="-fx-background-color: #00796B; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 10;" />
+        <!-- Error Message -->
+        <Label fx:id="loginMessageLabel" text="" style="-fx-text-fill: red;" />
+        <!-- Register Link -->
+        <Hyperlink fx:id="registerLink" text="Don't have an account? Register here" onAction="#switchToRegister"
+                   style="-fx-text-fill: #00796B; -fx-font-weight: bold;" />
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo.CustomerController"
+      spacing="10" style="-fx-padding: 15;">
+
+    <!-- Title -->
+    <Text text="Customer Management" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Customer ID (read-only) -->
+    <TextField fx:id="idField" promptText="Customer ID" editable="false" />
+
+    <!-- Customer Name -->
+    <TextField fx:id="nameField" promptText="Customer Name" />
+
+    <!-- Customer Contact -->
+    <TextField fx:id="contactField" promptText="Contact Number" />
+
+    <!-- Driving License -->
+    <TextField fx:id="drivingLicenseField" promptText="Driving License" />
+
+    <!-- Rental History (Text Area) -->
+    <TextArea fx:id="rentalHistoryField" promptText="Rental History" />
+
+    <!-- Buttons for Add, Update, Delete -->
+    <HBox spacing="10">
+        <Button text="Add Customer" onAction="#handleAdd" />
+        <Button text="Update Customer" onAction="#handleUpdate" />
+        <Button text="Delete Customer" onAction="#handleDelete" />
+    </HBox>
+
+    <!-- Search Field -->
+    <TextField fx:id="searchField" promptText="Search Customer" />
+
+    <!-- Table for Displaying Customers -->
+    <TableView fx:id="customerTable" prefWidth="600">
+        <columns>
+            <!-- ID Column -->
+            <TableColumn fx:id="idCol" text="ID" prefWidth="100" />
+
+            <!-- Name Column -->
+            <TableColumn fx:id="nameCol" text="Name" prefWidth="150" />
+
+            <!-- Contact Column -->
+            <TableColumn fx:id="contactCol" text="Contact" prefWidth="150" />
+
+            <!-- Driving License Column -->
+            <TableColumn fx:id="drivingLicenseCol" text="Driving License" prefWidth="150" />
+
+            <!-- Rental History Column -->
+            <TableColumn fx:id="rentalHistoryCol" text="Rental History" prefWidth="150" />
+        </columns>
+    </TableView>
+
+</VBox>

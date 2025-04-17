@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.ReportController">
+    <children>
+        <TabPane fx:id="reportTabs" layoutX="14" layoutY="14" prefWidth="780" prefHeight="550" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <!-- Revenue Overview -->
+                <Tab text="Revenue Overview">
+                    <content>
+                        <VBox spacing="10" alignment="TOP_CENTER">
+                            <HBox spacing="10" alignment="CENTER">
+                                <Label text="Start Date:"/>
+                                <DatePicker fx:id="startDatePicker"/>
+                                <Label text="End Date:"/>
+                                <DatePicker fx:id="endDatePicker"/>
+                                <Button text="Filter" onAction="#filterRevenueData"/>
+                            </HBox>
+                            <PieChart fx:id="revenuePieChart" prefWidth="750" prefHeight="450"/>
+                            <Button text="Export to CSV" onAction="#exportRevenueToCSV"/>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <!-- Unavailable Vehicles Count -->
+                <Tab text="Unavailable Vehicles">
+                    <content>
+                        <VBox spacing="10" alignment="TOP_CENTER">
+                            <BarChart fx:id="vehicleUnavailabilityBarChart" prefWidth="750" prefHeight="450">
+                                <xAxis>
+                                    <CategoryAxis label="Vehicle Category"/>
+                                </xAxis>
+                                <yAxis>
+                                    <NumberAxis label="Unavailable Vehicle Count"/>
+                                </yAxis>
+                            </BarChart>
+                            <Button text="Export to CSV" onAction="#exportUnavailableVehiclesToCSV"/>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <!-- Vehicle Category Distribution -->
+                <Tab text="Vehicle Category Distribution">
+                    <content>
+                        <VBox spacing="10" alignment="TOP_CENTER">
+                            <PieChart fx:id="vehicleCategoryPieChart" prefWidth="750" prefHeight="450"/>
+                            <Button text="Export to CSV" onAction="#exportVehicleCategoryToCSV"/>
+                        </VBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
